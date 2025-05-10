@@ -90,6 +90,7 @@ export default function App() {
             Популярные новости
           </h2>
           <div className="border-t-2 border-indigo-500 w-24 mx-auto mb-12">
+            <img src="public\9may.webp" alt="" />
             <PopularNews />
           </div>
         </section>
