@@ -45,13 +45,13 @@ export default function App() {
             ></div>
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             
-            <div className="relative z-10 h-full flex flex-col justify-center p-6 sm:p-8 md:p-12">
+            <div className="relative z-10 h-full justify-center p-6 sm:p-16 md:p-32">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">Экономический форум</h3>
               <p className="text-white text-base sm:text-lg md:text-xl mb-6">
                 В столичном регионе 17 мая прошел международный экономический
                 форум, были решены проблемы экономического кризиса
               </p>
-              <Button className="self-start">Открыть</Button>
+              <Button className="text-sm">Открыть</Button>
             </div>
           </div>
         </section>
