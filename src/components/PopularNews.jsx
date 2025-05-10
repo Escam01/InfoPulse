@@ -14,7 +14,7 @@ export default function PopularNews() {
     <>
       {newsCard.map((card, index) => (
         <div key={index}>
-            <img src="/public/9may.webp" alt="" />
+            <img src="public\9may.webp" alt="" />
           <h1>{card.title}</h1>
           <h1>{card.description}</h1>
           <h1>{card.timeDate}</h1>
