@@ -6,7 +6,7 @@ export default function App() {
   const newsDaysImage = "/news-day.png";
   return (
     <>
-      <nav className="">
+      <nav className="border ">
         <p className="text-3xl mx-8 pt-6 font-sans">InfoPulse</p>
         <ul className="flex flex-row-reverse space-x-8 mx-8">
           <br />
@@ -16,6 +16,8 @@ export default function App() {
           <li>Разделы новостей</li>
           <li>Новость дня</li>
         </ul>
+        <br />
+        {/* <hr className="border-black mx-32 " /> */}
       </nav>
       <main>
         <section className="mx-32 my-32">
