@@ -1,82 +1,92 @@
 import Button from "./components/Button";
 import CardsNews from "./components/CardsNews";
 import Footer from "./components/Footer";
+import BurgerMenu from "./components/BurgerMenu";
 
 export default function App() {
   const newsDaysImage = "/news-day.png";
+  
   return (
-    <>
-      <nav className="border ">
-        <p className="text-3xl mx-8 pt-6 font-sans">InfoPulse</p>
-        <ul className="flex flex-row-reverse space-x-8 mx-8">
-          <br />
-          <li>Контакты</li>
-          <li>Последние новости</li>
-          <li>Популярные новости</li>
-          <li>Разделы новостей</li>
-          <li>Новость дня</li>
-        </ul>
-        <br />
-        {/* <hr className="border-black mx-32 " /> */}
+    <div className="min-h-screen flex flex-col">
+      {/* Навигация */}
+      <nav className="border-b border-gray-200 sticky top-0 bg-white z-50">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center py-4">
+            <button className="sm:hidden p-2">
+              <BurgerMenu />
+            </button>
+            
+            <p className="text-2xl sm:text-3xl font-sans font-bold">InfoPulse</p>
+            
+            <div className="hidden sm:block">
+              <ul className="flex space-x-6">
+                <li className="hover:text-indigo-600 cursor-pointer">Новость дня</li>
+                <li className="hover:text-indigo-600 cursor-pointer">Разделы новостей</li>
+                <li className="hover:text-indigo-600 cursor-pointer">Популярные новости</li>
+                <li className="hover:text-indigo-600 cursor-pointer">Последние новости</li>
+                <li className="hover:text-indigo-600 cursor-pointer">Контакты</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
-      <main>
-        <section className="mx-32 my-32">
-          <p className="text-4xl text-center">Новость дня</p>
-          <br />
-          <br />
-          <hr  className="border-indigo-500"/>
-          <br />
-          <br />
-          <div
-            className="relative w-full h-96 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${newsDaysImage})` }}
-          >
-            {/* Затемнение фона */}
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-            {/* Контент */}
-            <div className="relative z-10 mx-40 text-white p-6">
-              <p className="text-3xl font-bold">Экономический форум</p>
-              <p className="text-xl mt-2">
+      {/* Основное содержимое */}
+      <main className="flex-grow container mx-auto px-4 sm:px-6">
+        {/* Новость дня */}
+        <section className="py-12 md:py-16 lg:py-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Новость дня</h2>
+          <div className="border-t-2 border-indigo-500 w-24 mx-auto mb-12"></div>
+          
+          <div className="relative rounded-xl overflow-hidden h-64 sm:h-80 md:h-96">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${newsDaysImage})` }}
+            ></div>
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            
+            <div className="relative z-10 h-full flex flex-col justify-center p-6 sm:p-8 md:p-12">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">Экономический форум</h3>
+              <p className="text-white text-base sm:text-lg md:text-xl mb-6">
                 В столичном регионе 17 мая прошел международный экономический
                 форум, были решены проблемы экономического кризиса
               </p>
-              <br />
-              <Button>Открыть</Button>
+              <Button className="self-start">Открыть</Button>
             </div>
           </div>
         </section>
-        <section className="mx-32 my-32">
-          <p className="text-4xl text-center">Разделы новостей</p>
-          <br />
-          <br />
-          <hr  className="border-indigo-500"/>
-          <br />
-          <br />
-          <div>
-            <CardsNews />
+
+        {/* Разделы новостей */}
+        <section className="py-12 md:py-16 lg:py-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Разделы новостей</h2>
+          <div className="border-t-2 border-indigo-500 w-24 mx-auto mb-12"></div>
+          
+          <div className="">
+            <CardsNews></CardsNews>
           </div>
         </section>
-        <section className="mx-32 my-32">
-          <p className="text-4xl text-center">Популярные новости</p>
-          <br />
-          <br />
-          <hr  className="border-indigo-500"/>
-          <br />
-          <br />
+
+        {/* Популярные новости */}
+        <section className="py-12 md:py-16 lg:py-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Популярные новости</h2>
+          <div className="border-t-2 border-indigo-500 w-24 mx-auto mb-12"></div>
+          
+          {/* Здесь можно добавить компонент для популярных новостей */}
         </section>
-        <section className="mx-32 my-32">
-          <p className="text-4xl text-center">Последние новости</p>
-          <br />
-          <br />
-          <hr  className="border-indigo-500"/>
-          <br />
-          <br />
+
+        {/* Последние новости */}
+        <section className="py-12 md:py-16 lg:py-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Последние новости</h2>
+          <div className="border-t-2 border-indigo-500 w-24 mx-auto mb-12"></div>
+          
+          {/* Здесь можно добавить компонент для последних новостей */}
         </section>
       </main>
-      <footer>
-        <Footer></Footer>
+
+      {/* Подвал */}
+      <footer className="bg-gray-100 mt-auto">
+        <Footer />
       </footer>
-    </>
+    </div>
   );
 }
