@@ -7,7 +7,7 @@ export default function PopularNews() {
       timeDate: "9 мая 2025",
     },
     {
-      img: "/sport-event.webp",
+      img: "/sport-event.jpg",
       title: "Спортивные соревнования",
       description: "Городской марафон собрал рекордное количество участников",
       timeDate: "10 мая 2025",
