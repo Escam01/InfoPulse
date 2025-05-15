@@ -89,10 +89,7 @@ export default function App() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             Популярные новости
           </h2>
-          <div className="border-t-2 border-indigo-500 w-24 mx-auto mb-12">
-            <img src="public\9may.webp" alt="" />
-            <PopularNews />
-          </div>
+          <PopularNews />
         </section>
 
         {/* Последние новости */}
