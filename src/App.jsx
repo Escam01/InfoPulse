@@ -3,6 +3,7 @@ import CardsNews from "./components/CardsNews";
 import Footer from "./components/Footer";
 import BurgerMenu from "./components/BurgerMenu";
 import PopularNews from "./components/PopularNews";
+import LatestNews from "./components/LatestNews";
 import { useRef, useState } from "react";
 
 export default function App() {
@@ -167,6 +168,7 @@ export default function App() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             Популярные новости
           </h2>
+          <div className="border-t-2 border-indigo-500 w-24 mx-auto mb-12" ></div>
           <PopularNews />
         </section>
 
@@ -176,8 +178,7 @@ export default function App() {
             Последние новости
           </h2>
           <div className="border-t-2 border-indigo-500 w-24 mx-auto mb-12"></div>
-
-          {/* Здесь можно добавить компонент для последних новостей */}
+          <LatestNews/>
         </section>
       </main>
 
